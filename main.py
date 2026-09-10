@@ -56,6 +56,12 @@ def init_db():
     conn.close()
 
 init_db()
+intents = discord.Intents.default()
+intents.message_content = True
+intents.members = True
+intents.presences = True
+
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 def get_player(user_id, username):
     conn = sqlite3.connect('game_data.db')

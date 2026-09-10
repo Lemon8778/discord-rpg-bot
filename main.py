@@ -4,7 +4,7 @@ from discord import app_commands
 import sqlite3
 import random
 import os
-
+from keep_alive import keep_alive
 # -------------------------------------------------------------------
 # 1. 資料庫初始化 (擴充地圖、防具、公會與副業材料欄位)
 # -------------------------------------------------------------------
@@ -490,5 +490,6 @@ async def profile(interaction: discord.Interaction):
 # 7. 啟動機器人
 # -------------------------------------------------------------------
 if __name__ == "__main__":
+    keep_alive()
     TOKEN = os.getenv("DISCORD_TOKEN")
     bot.run(TOKEN)

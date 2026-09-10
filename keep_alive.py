@@ -9,7 +9,7 @@ def home():
     return "Bot is alive!"
 
 def run():
-    # 自動抓取 Render 要求的 PORT，預設為 10000
+    # 自動獲取 Render 給予的 PORT，預設為 10000
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
 

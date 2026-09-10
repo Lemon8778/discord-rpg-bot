@@ -490,6 +490,6 @@ async def profile(interaction: discord.Interaction):
 # 7. 啟動機器人
 # -------------------------------------------------------------------
 if __name__ == "__main__":
-    keep_alive()
+    keep_alive()  # <--- 這行必須放在 bot.run(TOKEN) 的上面！
     TOKEN = os.getenv("DISCORD_TOKEN")
     bot.run(TOKEN)
